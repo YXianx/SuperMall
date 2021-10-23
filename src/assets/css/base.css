@@ -1,0 +1,58 @@
+/* 重置 标签风格统一 */
+@import "./normalize.css";
+
+/* 对页面初始化设置 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 根元素 相当于创建css的变量 */
+:root {
+  --color-text: #666;
+  /* 高亮 */
+  --color-high-text: #ff5777;
+  /* 背景颜色 > 导航 */
+  --color-tint: #ff8198;
+  /* 背景色 */
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+}
+
+a {
+  color: var(--color-tint);
+  text-decoration: none;
+}
+
+/* 清除浮动 */
+.clear-fix::after {
+  clear: both;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
